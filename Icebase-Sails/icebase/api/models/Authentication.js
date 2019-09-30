@@ -12,8 +12,6 @@ module.exports = {
     LastName:   { type: 'string', required: true },
     Email:      { type: 'string', required: true },
     Password:   { type: 'string', required: true },
-    Address:    { type: 'string'},
-    Gender:     { type: 'string', required: true, isIn: ['male', 'female']}
   },
 
 };

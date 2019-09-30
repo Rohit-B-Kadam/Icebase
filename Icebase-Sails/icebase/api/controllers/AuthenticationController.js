@@ -9,7 +9,7 @@ module.exports = {
 
   //Controller action for 'GET /helloworld'
   printHelloWorld : function(req,res){
-    return res.send('Hello World!!!');
+    return res.json({ "status": 0, "message": "HelloWorld"});
   },
 
   // Create
@@ -25,9 +25,7 @@ module.exports = {
           FirstName: parameters.firstName, 
           LastName: parameters.lastName, 
           Email: parameters.email, 
-          Password: parameters.password,
-          Address: parameters.address,
-          Gender: parameters.gender
+          Password: parameters.password
         })
         .exec(
           // after operation below function will call
@@ -90,9 +88,7 @@ module.exports = {
         FirstName: parameters.firstName, 
         LastName: parameters.lastName, 
         Email: parameters.email, 
-        Password: parameters.password,
-        Address: parameters.address,
-        Gender: parameters.gender
+        Password: parameters.password
       })
       .fetch()
       .exec(function(err, user) {
